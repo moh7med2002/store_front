@@ -29,6 +29,9 @@ function Layout(props) {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const {user} = useSelector((state)=>state.userLogin);
+    const navItems = [
+        {title:'Home',url:"/"}, user&&{title:"favirote" , url:"/favirotes"}, user&&{title:"cart" , url:"/cart"} ,user&&{title:'Orders',url:"/my-orders"}
+    ];
     const dispatch = useDispatch();
 
     const handleDrawerToggle = () => {
