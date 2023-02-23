@@ -21,9 +21,7 @@ import Footer from './Footer';
 
 
 const drawerWidth = 240;
-const navItems = [
-    {title:'Home',url:"/"},{title:"favirote" , url:"/favirotes"},{title:"cart" , url:"/cart"} ,{title:'Orders',url:"/my-orders"}
-];
+
 
 function Layout(props) {
     const { window } = props;
@@ -46,10 +44,10 @@ function Layout(props) {
         <Divider />
         <List>
             {navItems.map((item) => (
-            <Link to={item.url}>
+            <Link to={item?.url}>
                 <ListItem key={item} disablePadding>
                     <ListItemButton sx={{ textAlign: 'center' }}>
-                    <ListItemText primary={item.title} />
+                    <ListItemText primary={item?.title} />
                     </ListItemButton>
                 </ListItem>
             </Link>
@@ -109,9 +107,9 @@ function Layout(props) {
             </Typography>
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                 {navItems.map((item) => (
-                <Link to={item.url}>
+                <Link to={item?.url}>
                     <Button key={item} sx={{ color: 'black' }}>
-                        {item.title}
+                        {item?.title}
                     </Button>
                 </Link>
                 ))}
