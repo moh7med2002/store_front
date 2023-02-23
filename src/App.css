@@ -1,0 +1,43 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+*{
+  font-family: 'Roboto', sans-serif !important;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+main{
+  width: 100%;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: #ff5252 !important;
+}
+
+.arrivalSwiper .swiper-wrapper{
+  margin-bottom: 60px;
+}
+.arrivalSwiper .swiper-pagination-bullet{
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.swiper-button-next::after , .swiper-button-prev::after{
+  color:white;
+  font-size: 30px !important;
+}
+.overlay::before{
+  content:"";
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0,0,0,.3);
+}
